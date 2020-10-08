@@ -12,7 +12,7 @@ public class RegistrAppTest {
     public void testName() throws Exception{
         Profesor profesor = new Profesor("Jose fiestas");
         RegistrApp registrApp = new RegistrApp();
-        if(!registrApp.iniciarSesion(profesor.getNombre())){
+        if(!registrApp.iniciarSesion(profesor)){
             throw new Exception("Error");
         }
     }
@@ -29,7 +29,7 @@ public class RegistrAppTest {
     public void testNotificar() throws Exception{
         RegistrApp registrApp = new RegistrApp();
         Administrativos administrativos = new Administrativos();
-        if(!administrativos.notificado(registrApp.notificar())){
+        if(!administrativos.notificado(registrApp)){
             throw new Exception("Error");
         }
     }
@@ -39,7 +39,7 @@ public class RegistrAppTest {
         long startTime = System.currentTimeMillis();
         Profesor profesor = new Profesor("Jose fiestas");
         RegistrApp registrApp = new RegistrApp();
-        registrApp.iniciarSesion(profesor.getNombre());
+        registrApp.iniciarSesion(profesor);
         registrApp.validarClase("Compiladores", "https://utec.zoom.us/rec/share/compiladoresClase1");
         long endTime = System.currentTimeMillis();
         long time = endTime - startTime;

@@ -6,7 +6,7 @@ public class Administrativos {
 
     public Administrativos(){}
 
-    public boolean notificado(boolean notificacionRecibida){
-        return notificacionRecibida;
+    public boolean notificado(RegistrApp registrApp) throws Exception {
+        return registrApp.notificar();
     }
 }

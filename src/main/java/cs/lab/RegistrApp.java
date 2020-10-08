@@ -5,8 +5,8 @@ public class RegistrApp {
 
     public RegistrApp(){}
 
-    public boolean iniciarSesion(String nombre){
-        validar = nombre.matches("(?i)(^[a-z])((?![ .,'-]$)[a-z .,'-]){0,24}$");
+    public boolean iniciarSesion(Profesor profesorName){
+        validar = profesorName.getNombre().matches("(?i)(^[a-z])((?![ .,'-]$)[a-z .,'-]){0,24}$");
         return validar;
     }
 
