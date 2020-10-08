@@ -8,7 +8,7 @@ public class RegistrApp {
         return validar;
     }
 
-    public boolean validarClase(String enlace){
+    public boolean validarClase(String titulo, String enlace){
         String prefix = "https://utec.zoom.us/rec/share/";
 
         for (int x=0;x<prefix.length();x++){
