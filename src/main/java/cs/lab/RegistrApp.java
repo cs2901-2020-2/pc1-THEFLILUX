@@ -9,8 +9,6 @@ public class RegistrApp {
     }
 
     public boolean validarClase(String titulo, String enlace){
-        String[] tituloTokens = titulo.split(" ");
-
         String prefix = "https://utec.zoom.us/rec/share/";
 
         for (int x=0;x<prefix.length();x++){
