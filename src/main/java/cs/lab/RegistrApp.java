@@ -26,7 +26,7 @@ public class RegistrApp {
         return validar;
     }
 
-    public boolean notificar(String destino) throws Exception {
+    public boolean notificar() throws Exception {
         return validar;
     }
 

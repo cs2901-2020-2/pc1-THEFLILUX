@@ -1,3 +1,4 @@
+import cs.lab.Administrativos;
 import cs.lab.Profesor;
 import cs.lab.RegistrApp;
 import org.testng.Assert;
@@ -20,6 +21,15 @@ public class RegistrAppTest {
     public void testClase() throws Exception{
         RegistrApp registrApp = new RegistrApp();
         if(!registrApp.validarClase("Compiladores", "https://utec.zoom.us/rec/share/compiladoresClase1")){
+            throw new Exception("Error");
+        }
+    }
+
+    @Test
+    public void testNotificar() throws Exception{
+        RegistrApp registrApp = new RegistrApp();
+        Administrativos administrativos = new Administrativos();
+        if(!administrativos.notificado(registrApp.notificar())){
             throw new Exception("Error");
         }
     }
