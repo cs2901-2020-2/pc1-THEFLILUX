@@ -41,6 +41,8 @@ public class RegistrAppTest {
         RegistrApp registrApp = new RegistrApp();
         registrApp.iniciarSesion(profesor);
         registrApp.validarClase("Compiladores", "https://utec.zoom.us/rec/share/compiladoresClase1");
+        Administrativos administrativos = new Administrativos();
+        administrativos.notificado(registrApp);
         long endTime = System.currentTimeMillis();
         long time = endTime - startTime;
         Assert.assertTrue(time <= 500);

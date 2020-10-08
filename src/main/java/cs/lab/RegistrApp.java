@@ -3,8 +3,6 @@ package cs.lab;
 public class RegistrApp {
     boolean validar=true;
 
-    public RegistrApp(){}
-
     public boolean iniciarSesion(Profesor profesorName){
         validar = profesorName.getNombre().matches("(?i)(^[a-z])((?![ .,'-]$)[a-z .,'-]){0,24}$");
         return validar;
@@ -16,17 +14,13 @@ public class RegistrApp {
         String prefix = "https://utec.zoom.us/rec/share/";
 
         for (int x=0;x<prefix.length();x++){
-            if(prefix.charAt(x) == enlace.charAt(x)){
-                validar = true;
-            } else{
-                validar = false;
-            }
+            validar = prefix.charAt(x) == enlace.charAt(x);
         }
 
         return validar;
     }
 
-    public boolean notificar() throws Exception {
+    public boolean notificar(){
         return validar;
     }
 

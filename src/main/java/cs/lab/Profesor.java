@@ -2,7 +2,7 @@ package cs.lab;
 
 public class Profesor {
 
-    public String nombre;
+    private String nombre;
 
     public Profesor(String name){
         nombre = name;
